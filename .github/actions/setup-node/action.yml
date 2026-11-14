@@ -1,0 +1,14 @@
+name: Setup Node.js Environment
+description: Set up Node.js and install dependencies
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - name: Install dependencies
+      shell: bash
+      run: npm install
