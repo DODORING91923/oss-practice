@@ -1,0 +1,9 @@
+{
+  "name": "oss-practice",
+  "version": "1.0.0",
+  "description": "Open Source Software Practice",
+  "scripts": {
+    "lint": "node --check index.js",
+    "test": "node --test"
+  }
+}
