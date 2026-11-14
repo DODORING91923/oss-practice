@@ -1,13 +1,19 @@
 name: Setup Node.js Environment
 description: Set up Node.js and install dependencies
 
+inputs:
+  node-version:
+    description: Node.js version
+    required: true
+    default: '22'
+
 runs:
   using: composite
   steps:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 22
+        node-version: ${{ inputs.node-version }}
 
     - name: Install dependencies
       shell: bash
